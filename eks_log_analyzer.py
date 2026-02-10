@@ -20,7 +20,7 @@ class EKSLogAnalyzer:
     
     def __init__(self, region_name: str = None):
         """Initialize the EKS Log Analyzer"""
-        self.region_name = region_name or os.getenv('AWS_REGION', 'us-east-2')
+        self.region_name = region_name or os.getenv('AWS_REGION', 'us-east-1')
         self.model_id = os.getenv('BEDROCK_MODEL_ID', 'anthropic.claude-3-sonnet-20240229-v1:0')
         self.max_log_entries = int(os.getenv('MAX_LOG_ENTRIES', 1000))
         
